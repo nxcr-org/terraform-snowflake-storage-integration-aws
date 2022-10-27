@@ -22,3 +22,8 @@ output "sns_topic_arn" {
   description = "GEFF S3 SNS Topic to use while creating the Snowflake PIPE."
   value       = aws_sns_topic.geff_bucket_sns.arn
 }
+
+output "s3_reader_id" {
+  description = "GEFF IAM Role to use in the Snowflake Storage Integration."
+  value       = aws_iam_role.s3_reader.id
+}
